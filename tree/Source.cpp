@@ -23,13 +23,10 @@ public:
 
 	Node* Root;
 
-
 	BST()
 	{
 		Root = NULL;
 	}
-
-
 
 	Node* Insert(Node* r, int item)
 	{

@@ -40,13 +40,8 @@ public:
 				cout << "enter " << i + 1 << " elment :: ";
 				cin >> ptr[i];
 				length++;
-
 			}
-
-
 		}
-
-
 	}
 
 	void Display()
@@ -63,9 +58,7 @@ public:
 
 				cout << "A[" << index << "] :: " << ptr[index] << endl;
 			}
-
 		}
-
 	}
 
 	int search(int Value)
@@ -92,15 +85,13 @@ public:
 		if (length == size)
 		{
 			cout << "Array is full " << endl;
-
 		}
 
 		else
 		{
 
 			ptr[length] = Value;
-			length++;
-		
+			length++;		
 		}
 	}
 
@@ -109,7 +100,6 @@ public:
 		if ((index < 0) || (index >= size)) 
 		{
 			cout << "Error out of range !! \n";
-
 		}
 
 		else
@@ -122,7 +112,6 @@ public:
 			ptr[index] = Value;
 
 			length++;
-
 		}
 	}
 
@@ -133,7 +122,6 @@ public:
 		if (index < 0 || index >= size)
 		{
 			cout << "index out of range " << endl;
-
 		}
 
 		else // 1 2 33 4 5 .. .. .. 
@@ -151,10 +139,7 @@ public:
 				length--;
 
 			}
-			
-
 		}
-
 	}
 
 	void Enlarge(int new_size)
@@ -162,7 +147,6 @@ public:
 		if (new_size < size)
 		{
 			cout << "New size must be large than old size" << endl;
-
 		}
 
 		else
@@ -176,22 +160,17 @@ public:
 			for (int i = 0;i < length;i++)
 			{
 				ptr[i] = old[i];
-
 			}
 
 			delete[]old;
-
 		}
 	}
 
 	void merge(items Other)
 	{
 		int index = 0;
-
 		int* old = ptr;
-
 		size = size + Other.get_size();
-
 		ptr = new int[size];
 
 		for (index = 0;index < length;index++)
@@ -205,7 +184,6 @@ public:
 		{
 			ptr[index + j] = Other.ptr[j];
 			length++;
-
 		}
 	}
 
@@ -234,7 +212,6 @@ public:
 
 
 
-
 int main()
 {
 	int element = 0;
@@ -247,7 +224,6 @@ int main()
 	A.Display();
 
 	A.fill();
-
 	cout << "Length :: " << A.get_length() << endl;
 	cout << "Size   :: " << A.get_size() << endl;
 
@@ -257,19 +233,15 @@ int main()
 	cin >> element;
 
 	index = A.search(element);
-
 	if (index < 0)
 	{
 		cout << "Element not found " << endl;
-
 	}
 
 	else
 	{
 		cout << "element founded in index :: " << index << endl;
-
 	}
-
 
 	cout << "Please enter elementyou  want to appent it :: ";
 	cin >> element;
@@ -284,12 +256,9 @@ int main()
 	cin >> element >> index;
 
 	A.insert(element, index);
-
 	A.Display();
-
 	cout << "Length :: " << A.get_length() << endl;
 	cout << "Size   :: " << A.get_size() << endl;
-
 
 	cout << "\n===============================================\n";
 
@@ -302,9 +271,6 @@ int main()
 
 	cout << "Length :: " << A.get_length() << endl;
 	cout << "Size   :: " << A.get_size() << endl;
-
-
-
 
 	return 0;
 

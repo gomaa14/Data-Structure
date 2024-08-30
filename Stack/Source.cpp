@@ -47,16 +47,12 @@ public:
 		{
 			newnode->Next = NULL;
 			Top = newnode;
-
 		}
-		
 		else
 		{
 			newnode->Next = Top;
 			Top = newnode;
 		}
-		
-
 	}
 
 	void Pop(void)
@@ -65,17 +61,13 @@ public:
 		if (Is_Empty())
 		{
 			cout << "Stack is emty !!" << endl;
-
 		}
 		else
 		{
 			Node* delptr = Top;
-
 			Top = Top->Next;
 			//Ret_Val = delptr->Data;
-
 			delete delptr;
-
 		}
 	}
 
@@ -83,24 +75,19 @@ public:
 	{
 		Node* Temp = Top;
 		int counter = 0;
-
 		while (Temp)
 		{
 			counter++;
-
 			Temp = Temp->Next;
 		}
 
 		return counter;
-
 	}
 
 	bool Is_Found(int Value)
 	{
 		bool found = false;
-
 		Node* Temp = Top;
-
 		while (Temp)
 		{
 			if (Temp->Data == Value)
@@ -110,19 +97,13 @@ public:
 			}
 
 			Temp = Temp->Next;
-
-
 		}
-
 		return found;
-
 	}
 
 	int Peek(void)
 	{
-
 		return Top->Data;
-
 	}
 
 	bool Is_Full()
@@ -133,7 +114,6 @@ public:
 		{
 			cout << "Stack is full " << endl;
 			return true;
-
 		}
 		else
 		{
@@ -147,7 +127,6 @@ public:
 		{
 			cout << "NO element to display " << endl;
 			return;
-
 		}
 
 		Node* Temp = Top;
@@ -156,11 +135,8 @@ public:
 		{
 			cout << Temp->Data << "\t";
 			Temp = Temp->Next;
-
 		}
-
 		cout << endl;
-
 	}
 
 

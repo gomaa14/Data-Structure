@@ -250,10 +250,8 @@ int main()
 	l.Display();
 	cout << "NO of element :: " << l.Count() << endl;
 
-
 	l.Append(100);
 	l.Display();
-
 
 	l.Insert_Befor(30, 5);
 	l.Insert_Befor(10, 90);
@@ -262,20 +260,14 @@ int main()
 
 
 	bool X = l.Is_Found(5);
-
 	cout << X << endl;
 
-
 	l.Delet_First();
-
 	l.Delete(123);
-
 	l.Delete(30);
-
 	l.Delete(90);
 
 	l.Display();
-
 
 	return 0;
 

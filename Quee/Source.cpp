@@ -51,7 +51,6 @@ public:
 		{
 			Front = newnode;
 			Rear = newnode;
-
 		}
 
 		else
@@ -74,19 +73,15 @@ public:
 			delete Front;
 			Front = NULL;
 			Rear = NULL;
-
 		}
 
 		else
 		{
 			Node* delptr = Front;
-
 			Front = Front->Next;
-
 			delete delptr;
 
 		}
-
 	}
 
 	void Clear(void)
@@ -94,9 +89,7 @@ public:
 		while (!Is_Empty())
 		{
 			Dequeue();
-
 		}
-
 	}
 
 	int Get_Rear(void)
@@ -113,7 +106,6 @@ public:
 	{
 		Node* Temp = Front;
 		bool check = 0;
-
 		while (Temp)
 		{
 			if (Temp->Data == iteme)
@@ -122,16 +114,13 @@ public:
 				break;
 			}
 		}
-
 		return check;
-
 	}
 
 	int count(void)
 	{
 		int counter = 0;
 		Node* Temp = Front;
-
 		while (Temp)
 		{
 			counter++;
@@ -156,7 +145,6 @@ public:
 			{
 				cout << Temp->Data << "\t";
 				Temp = Temp->Next;
-
 			}
 			cout << endl;
 		}
@@ -173,9 +161,6 @@ public:
 
 
 
-
-
-
 int main()
 {
 
@@ -187,18 +172,14 @@ int main()
 	q.Enqueue(20);
 	q.Enqueue(30);
 	q.Enqueue(40);
-
 	q.Display();
 
 	q.Dequeue();
 	q.Dequeue();
-
 	q.Display();
 
 	cout << "No of element :: " << q.count() << endl;
-
 	q.Clear();
-
 	q.Display();
 
 
